@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <button (click)="navegarCadastro()">
     Novo funcionário
 </button>
@@ -21,3 +22,27 @@
         <td>{{ funcionario.nascimento | date: 'dd/MM/YYYY' }}</td>    
     </tr>
 </table>
+=======
+<table>
+    <tr class="linha-principal">
+        <td class="id"> Id</td>
+        <td> Nome</td>
+        <td> Nº dependentes</td>
+        <td> Salário</td>
+        <td> Data de nascimento</td>
+    </tr>
+
+    <tr *ngFor="let funcionario of listaFuncionarios">
+        <td class="id"> {{funcionario.id}}</td>
+        <td> {{funcionario.nome}}</td>
+        <td> {{funcionario.numDep}}</td>
+        <td> {{funcionario.salario | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}</td>
+        <td> {{funcionario.nascimento | date:'dd/MM/yyyy'}}</td>
+    </tr>
+
+</table>
+
+<button (click)="navegarCadastro()">
+    Novo Funcionário
+</button>
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf

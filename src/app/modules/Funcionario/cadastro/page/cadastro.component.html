@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="conteiner-principal">
     <button class="btn-voltar" (click)="voltar()">
         < </button>
@@ -5,19 +6,35 @@
                 <label class="titulo"> Novo funcionário</label>
                 <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
 
+=======
+<div class="conteiner-principal ">
+
+    <button class="btn-voltar" (click)="voltar()">
+        < </button>
+            <div class="container-cadastro">
+                <label class="titulo">Novo Funcionário</label>
+
+                <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf
                     <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" formControlName="nome">
                     </div>
+<<<<<<< HEAD
 
                     <div class="form-group">
                         <label for="numDep">N° departamento</label>
+=======
+                    <div class="form-group">
+                        <label for="numDep">Nº dependentes</label>
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf
                         <input type="number" formControlName="numDep">
                     </div>
                     <div class="form-group">
                         <label for="salario">Salário</label>
                         <input type="number" formControlName="salario">
                     </div>
+<<<<<<< HEAD
 
                     <div class="form-group">
                         <label for="nascimento">Data de nascimento</label>
@@ -25,8 +42,19 @@
                     </div>
 
 
+=======
+                    <div class="form-group">
+                        <label for="nascimento">Data Nascimento</label>
+                        <input type="date" formControlName="nascimento">
+                    </div>
+
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf
                     <input type="submit" class="btn" value="Cadastrar">
 
                 </form>
             </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf

@@ -18,6 +18,7 @@ export class ListagemComponent implements OnInit {
     constructor(private funcionarioApi: FuncionariosApi, private router: Router) { }
 
     ngOnInit() {
+<<<<<<< HEAD
         this.funcionarioApi.adquirirTodos().subscribe(retorno => { 
             this.listaFuncionarios = retorno;
         });
@@ -25,6 +26,15 @@ export class ListagemComponent implements OnInit {
 
     navegarCadastro() {
     this.router.navigate([RotasConstant])
+=======
+        this.funcionarioApi.adquirirTodos().subscribe(retorno => {
+            this.listaFuncionarios = retorno;
+        })
+    }
+
+    navegarCadastro() {
+        this.router.navigate([RotasConstant.CADASTRO]);
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf
     }
 
 }

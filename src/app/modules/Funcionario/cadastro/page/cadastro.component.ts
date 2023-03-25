@@ -14,6 +14,7 @@ import { FuncionarioDTO } from 'src/app/models/funcionario.dto';
 export class CadastroComponent implements OnInit {
     // @ts-ignore
     formCliente: FormGroup;
+<<<<<<< HEAD
 
     constructor(private formBuilder: FormBuilder, private funcionarioApi: FuncionariosApi, private router: Router) { }
     ngOnInit() {
@@ -27,6 +28,17 @@ export class CadastroComponent implements OnInit {
             nascimento: ['', [Validators.required]],
 
         })
+=======
+    constructor(private formBuilder: FormBuilder, private funcionarioApi: FuncionariosApi, private router: Router) { }
+
+    ngOnInit() {
+        this.formCliente = this.formBuilder.group({
+            nome: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(40)]],
+            numDep: [0, [Validators.required]],
+            salario: [0, [Validators.required]],
+            nascimento: ['', [Validators.required]],
+        });
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf
     }
 
     onSubmit() {
@@ -39,9 +51,25 @@ export class CadastroComponent implements OnInit {
             alert('Dados invalidos');
         }
 
+<<<<<<< HEAD
+=======
+    onSubmit() {
+        if (this.formCliente.valid) {
+            var funcionario = this.formCliente.value;
+            this.funcionarioApi.salvar(new FuncionarioDTO(funcionario.nome, funcionario.numDep, funcionario.salario, funcionario.nascimento)).subscribe(retorno => {
+                this.voltar();
+            });
+        } else {
+            alert('Dados invalidos')
+        }
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf
     }
     voltar() {
         this.router.navigate([RotasConstant.LISTAGEM]);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf

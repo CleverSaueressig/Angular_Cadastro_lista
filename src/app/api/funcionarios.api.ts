@@ -14,8 +14,19 @@ export class FuncionariosApi {
     constructor(private http: HttpClient) { }
 
     adquirirTodos(): Observable<Array<FuncionarioDTO>> {
+<<<<<<< HEAD
         return this.http.get<Array<FuncionarioDTO>>(EndpointsConstant.FUNCIONARIOS.buscarFuncionarios)
                         .pipe(map(listaFuncionarios => { return listaFuncionarios; }))
+=======
+        return this.http.get<Array<FuncionarioDTO>>(EndpointsConstant.FUNCIONARIOS.buscarFuncionarios).pipe(
+            map(funciorios => {
+                return funciorios;
+            })
+        );
+    }
+    salvar(funcionarioDTO: FuncionarioDTO): Observable<FuncionarioDTO> {
+        return this.http.post<FuncionarioDTO>(EndpointsConstant.FUNCIONARIOS.salvarFuncionarios, funcionarioDTO)
+>>>>>>> 8705bd244266a7bbdeeee34d80331d23a3dd2edf
     }
 
     salvar(funcionarioDTO: FuncionarioDTO): Observable<FuncionarioDTO> {
